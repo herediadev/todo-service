@@ -5,6 +5,10 @@ import { AppService } from './app.service';
 @Module({
   imports: [],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [{
+    provide: 'KEY1',
+    useClass: AppService,
+  }],
 })
-export class AppModule {}
+export class AppModule {
+}
